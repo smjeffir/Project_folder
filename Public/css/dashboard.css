@@ -20,7 +20,15 @@ section .ban {
   font-weight: bold;
 }
 
+#taskTable > tbody > tr {
+  cursor: pointer;
+  border-left: 12px solid #eee;
+}
+#taskTable tbody tr.current-sprint {
+  border-left: 12px solid rgb(35, 95, 163);
+}
 
+/** tablesort **/
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
 }
