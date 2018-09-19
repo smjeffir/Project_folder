@@ -94,6 +94,10 @@ var tasksApp = new Vue({
       return 0 //moment().duration(end.diff(startTime)).asHours();
     }
   },
+  fetchTask(tid) {
+
+  },
+
   created () {
     console.log(window.location.href);
 
