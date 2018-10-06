@@ -103,13 +103,19 @@ var tasksApp = new Vue({
 
     const url = new URL(window.location.href);
     const taskId = url.searchParams.get("taskId");
-
     console.log('Task: '+ taskId);
+
     if (!taskId) {
       //TODO: Error? 404?
       //e.g., window.location = '404.html';
     }
 
-    // TODO: Fetch task-specific data
+    fetch('api/work.php?taskId=' + taskId)
+    .then(response => response.json() )
+    .then( json => {dashboardApp.tasks = json} )
+    .catch( err => {
+      console.log('TASK FETCH ERROR: ');
+      console.log(err);
+    })
   }
 })
