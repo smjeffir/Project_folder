@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -60,7 +61,7 @@
       </div> <!-- end row 2, charts -->
 
       <div class="row">
-        <table id="taskTable" class="table table-striped table-sm">
+        <table id="taskTable" class="table table-striped table-sm table-hover">
           <thead>
             <tr>
               <th>Task</th>
@@ -102,7 +103,7 @@
 
     <script src="js/tablesort.min.js"></script>
     <script>
-      // Tablesort plugin from http://tristen.ca/tablesort/demo/
+      // Tablesort plugin frsom http://tristen.ca/tablesort/demo/
       Tablesort.extend('tshirt', function(item) {
         // Regular expression to test against.
         return /^X?S|M|X?L|2XL$/.test(item);
@@ -114,7 +115,5 @@
       });
       new Tablesort(document.getElementById('taskTable'));
     </script>
-
-    <a href="task.html"><button>Add New</button></a>
   </body>
 </html>
